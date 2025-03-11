@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --text: #000000;
+}
+
+.dark {
+  --background: #1a1a1a;
+  --text: #ffffff;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+}
+
+/* Dark mode overrides */
+.dark .bg-white {
+  background-color: #2a2a2a;
+}
+
+.dark .text-gray-900 {
+  color: #ffffff;
+}
+
+.dark .text-gray-600,
+.dark .text-gray-500 {
+  color: #a0aec0;
+}
+
+.dark .border-gray-200 {
+  border-color: #404040;
+}
+
+.dark .hover\:bg-gray-100:hover {
+  background-color: #333333;
+}
+
+.dark .bg-gray-100 {
+  background-color: #333333;
+}
+
+.dark .bg-gray-50 {
+  background-color: #2d2d2d;
+}
+
+.dark select,
+.dark input {
+  background-color: #2a2a2a;
+  color: #ffffff;
+  border-color: #404040;
+}
+
+.dark select option {
+  background-color: #2a2a2a;
+  color: #ffffff;
+}
+
+/* Table scrolling for mobile */
+.table-container {
+  position: relative;
+  width: calc(100vw - 3rem);
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+  padding: 0 1.5rem;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch; 
+}
+
+.table-container table {
+  min-width: 1000px;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.table-container::-webkit-scrollbar {
+  height: 6px;
+  background-color: #f1f1f1;
+  border-radius: 3px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 3px;
+}
+
+.table-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.dark .table-container::-webkit-scrollbar-track {
+  background: #2d2d2d;
+}
+
+.dark .table-container::-webkit-scrollbar-thumb {
+  background: #666;
+}
